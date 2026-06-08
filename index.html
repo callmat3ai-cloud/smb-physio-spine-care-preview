@@ -1,38 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Meta Tags -->
-  <title>Physio Spine Care | Best Spine & Ortho Physio in Gurugram</title>
-  <meta name="description" content="Welcome to Physio Spine Care in Gurugram, Haryana, India. Providing high-quality, professional Physiotherapy / Spine & Orthopedic solutions. Google Rating: 4.8 Stars with 91+ reviews. Book now.">
+  <title>Physio Spine Care | Spine & Orthopedic Physiotherapy Clinic Gurugram</title>
+  <meta name="description" content="Physio Spine Care is the premier physiotherapy clinic in Gurugram, Haryana. Specializing in advanced spine rehabilitation, herniated disc treatment, sciatica relief, and sports injuries. Book your consultation today.">
   <meta name="author" content="Physio Spine Care">
   
-  <!-- Google Fonts -->
+  <!-- Preconnect and Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   
+  <!-- LocalBusiness JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PhysiotherapyClinic",
+    "name": "Physio Spine Care Physiotherapy Clinic",
+    "image": "https://physiospinecare.com/assets/logo.png",
+    "@id": "https://physiospinecare.com/#clinic",
+    "url": "https://physiospinecare.com",
+    "telephone": "+91-88247-86777",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sector 45",
+      "addressLocality": "Gurugram",
+      "addressRegion": "Haryana",
+      "postalCode": "122003",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 28.4595,
+      "longitude": 77.0266
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "20:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/physiospinecare",
+      "https://www.instagram.com/physiospinecare"
+    ]
+  }
+  </script>
+
   <style>
-    
+    /* DESIGN SYSTEM (Swiss Modernism Elements) */
     :root {
-      --color-primary: #1e293b;
-      --color-primary-rgb: 30, 41, 59;
-      --color-accent: #0ea5e9;
-      --color-accent-rgb: 14, 165, 233;
-      --color-bg: #f8fafc;
-      --color-bg-alt: #f1f5f9;
-      --color-text: #0f172a;
-      --color-text-muted: #475569;
+      /* Typography */
+      --font-family-headings: 'Outfit', sans-serif;
+      --font-family-body: 'Source Sans 3', sans-serif;
+      
+      /* Color Palette (Swiss Modernism Light Mode) */
+      --bg-primary: #f8fafc;
+      --bg-secondary: #ffffff;
+      --bg-tertiary: #f1f5f9;
+      --text-primary: #1a1a1a;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-color: #cbd5e1;
+      
+      /* Brand Accent Colors */
+      --brand-primary: #1a3a5c;       /* Navy */
+      --brand-secondary: #4a7c8c;     /* Steel Blue */
+      --brand-accent: #e07b39;        /* Amber */
+      --brand-accent-hover: #c66528;
+      
+      /* Fixed Constants */
       --color-white: #ffffff;
-      --font-heading: 'Space Grotesk', sans-serif;
-      --font-body: 'Inter', sans-serif;
-      --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      --color-navy: #1a3a5c;
+      --whatsapp-green: #25d366;
+      --whatsapp-green-hover: #20ba5a;
+      --map-filter: desaturate(40%) contrast(1.05);
+
+      /* Radius Scales (Minimalist, sharp yet refined) */
+      --radius-sm: 2px;
+      --radius-md: 6px;
+      --radius-lg: 12px;
+      --radius-round: 9999px;
+
+      /* Spacing Scale */
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-24: 6rem;
+      
+      /* Transitions */
+      --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-normal: 300ms cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-slow: 600ms cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    * {
+    [data-theme="dark"] {
+      /* Dark Theme Variable Overrides */
+      --bg-primary: #0f172a;          /* Deep Slate */
+      --bg-secondary: #1e293b;        /* Medium Slate */
+      --bg-tertiary: #0f172a;
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+      
+      --brand-secondary: #64748b;
+      --map-filter: grayscale(100%) invert(92%) contrast(115%) opacity(75%);
+    }
+
+    /* CSS Reset */
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -40,46 +135,80 @@
 
     html {
       scroll-behavior: smooth;
+      font-size: 16px;
     }
 
     body {
-      font-family: var(--font-body);
-      background-color: var(--color-bg);
-      color: var(--color-text);
-      line-height: 1.7;
+      font-family: var(--font-family-body);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      transition: background-color var(--transition-normal), color var(--transition-normal);
       overflow-x: hidden;
     }
 
     h1, h2, h3, h4, h5, h6 {
-      font-family: var(--font-heading);
-      color: var(--color-text);
-      line-height: 1.2;
+      font-family: var(--font-family-headings);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.15;
     }
 
     p {
-      color: var(--color-text-muted);
+      color: var(--text-secondary);
     }
 
     a {
       text-decoration: none;
       color: inherit;
-      transition: var(--transition-normal);
+      transition: color var(--transition-fast), border-color var(--transition-fast);
+      cursor: pointer;
     }
 
+    /* Focus States for Keyboard Navigation */
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+      outline: 3px solid var(--brand-accent);
+      outline-offset: 2px;
+    }
+
+    /* Layout Containers */
     .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
+      width: 100%;
+      max-width: 1240px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: var(--space-6);
+      padding-right: var(--space-6);
     }
 
     .section-padding {
-      padding: 7rem 0;
+      padding-top: var(--space-24);
+      padding-bottom: var(--space-24);
     }
 
     @media (max-width: 768px) {
       .section-padding {
-        padding: 4rem 0;
+        padding-top: var(--space-12);
+        padding-bottom: var(--space-12);
       }
+    }
+
+    /* Swiss Modernism Layout Utilities */
+    .grid-lines {
+      position: relative;
+    }
+
+    .grid-lines::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 25%;
+      width: 1px;
+      background-color: var(--border-color);
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 1;
     }
 
     /* Buttons */
@@ -87,1326 +216,2085 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 1rem 2.2rem;
+      padding: var(--space-3) var(--space-6);
+      font-family: var(--font-family-headings);
       font-weight: 600;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: var(--transition-normal);
-      border: 2px solid transparent;
-      font-family: var(--font-body);
       font-size: 0.95rem;
+      border-radius: var(--radius-sm);
+      transition: all var(--transition-normal);
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .btn-primary {
-      background-color: var(--color-primary);
+      background-color: var(--brand-primary);
       color: var(--color-white);
-      box-shadow: 0 10px 15px -3px rgba(var(--color-primary-rgb), 0.3);
     }
 
     .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 20px -3px rgba(var(--color-primary-rgb), 0.4);
+      background-color: var(--brand-secondary);
+      transform: translateY(-2px);
     }
 
     .btn-secondary {
       background-color: transparent;
-      color: var(--color-primary);
-      border-color: var(--color-primary);
+      color: var(--text-primary);
+      border-color: var(--border-color);
     }
 
     .btn-secondary:hover {
-      background-color: var(--color-primary);
+      border-color: var(--text-primary);
+      background-color: rgba(0, 0, 0, 0.02);
+      transform: translateY(-2px);
+    }
+
+    [data-theme="dark"] .btn-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .btn-accent {
+      background-color: var(--brand-accent);
       color: var(--color-white);
-      transform: translateY(-3px);
+    }
+
+    .btn-accent:hover {
+      background-color: var(--brand-accent-hover);
+      transform: translateY(-2px);
     }
 
     /* Header & Navigation */
     header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background-color: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(var(--color-primary-rgb), 0.08);
-      padding: 1.2rem 0;
+      z-index: 900;
+      background-color: rgba(248, 250, 252, 0.85); /* Matches --bg-primary light mode */
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      transition: background-color var(--transition-normal), border-color var(--transition-normal);
+    }
+
+    [data-theme="dark"] header {
+      background-color: rgba(15, 23, 42, 0.85); /* Matches --bg-primary dark mode */
     }
 
     .nav-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      height: 72px;
     }
 
     .logo {
-      font-family: var(--font-heading);
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-family: var(--font-family-headings);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--brand-accent);
     }
 
     .nav-links {
       display: flex;
-      gap: 2.5rem;
+      gap: var(--space-8);
       align-items: center;
-    }
-
-    @media (max-width: 900px) {
-      .nav-links {
-        display: none;
-      }
     }
 
     .nav-link {
-      font-size: 1rem;
       font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      border-bottom: 2px solid transparent;
+      padding: 4px 0;
     }
 
     .nav-link:hover {
-      color: var(--color-accent);
+      color: var(--text-primary);
+      border-bottom-color: var(--brand-accent);
     }
 
-    /* Hero Layouts */
-    .hero-sec {
-      position: relative;
-      padding: 6rem 0;
+    .nav-actions {
       display: flex;
       align-items: center;
-      min-height: 80vh;
+      gap: var(--space-4);
     }
 
-    /* Split Organic Layout */
-    .hero-split-organic {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .hero-split-organic .hero-img-container {
-      position: relative;
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-      border: 6px solid var(--color-accent);
-      aspect-ratio: 1;
-    }
-
-    .hero-split-organic img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Centered Clinical Layout */
-    .hero-centered-clinical {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
+    /* Theme Toggle Switch */
+    .theme-toggle-btn {
+      background: none;
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 2rem;
+      justify-content: center;
+      cursor: pointer;
+      transition: border-color var(--transition-fast), background-color var(--transition-fast);
     }
 
-    .hero-centered-clinical .hero-img-box {
-      width: 100%;
-      margin-top: 3rem;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.15);
-      border: 1px solid rgba(var(--color-primary-rgb), 0.1);
+    .theme-toggle-btn:hover {
+      background-color: var(--bg-tertiary);
+      border-color: var(--text-primary);
     }
 
-    .hero-centered-clinical img {
-      width: 100%;
-      max-height: 500px;
-      object-fit: cover;
+    .theme-toggle-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
     }
 
-    /* Luxury Overlap Layout */
-    .hero-luxury-overlap {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      align-items: center;
+    .theme-toggle-btn .sun-icon {
+      display: none;
+    }
+
+    [data-theme="dark"] .theme-toggle-btn .moon-icon {
+      display: none;
+    }
+
+    [data-theme="dark"] .theme-toggle-btn .sun-icon {
+      display: block;
+    }
+
+    /* Mobile Hamburger Menu */
+    .hamburger-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
       position: relative;
+      z-index: 1000;
     }
 
-    .hero-luxury-overlap .hero-text-box {
-      background: var(--color-bg);
-      padding: 3rem;
-      border-left: 5px solid var(--color-accent);
-      z-index: 2;
-      position: relative;
-      margin-right: -100px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+    .hamburger-btn span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: currentColor;
+      margin: 4px auto;
+      transition: transform var(--transition-fast), opacity var(--transition-fast);
     }
 
-    .hero-luxury-overlap .hero-img-box {
-      z-index: 1;
-      height: 600px;
-      border-radius: 8px;
+    /* Responsive Header */
+    @media (max-width: 1024px) {
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--bg-secondary);
+        flex-direction: column;
+        justify-content: center;
+        gap: var(--space-8);
+        padding: var(--space-12);
+        z-index: 999;
+        border-top: 1px solid var(--border-color);
+        animation: fadeIn 0.3s ease forwards;
+      }
+
+      .header-nav-open .nav-links {
+        display: flex;
+      }
+
+      .hamburger-btn {
+        display: block;
+      }
+
+      .header-nav-open .hamburger-btn span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      .header-nav-open .hamburger-btn span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .header-nav-open .hamburger-btn span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* BENTO GRID HERO SECTION */
+    .hero-section {
+      background-color: var(--bg-primary);
+      border-bottom: 1px solid var(--border-color);
       overflow: hidden;
+      padding-top: var(--space-12);
+      padding-bottom: var(--space-16);
     }
 
-    .hero-luxury-overlap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Wave Soft Layout */
-    .hero-wave-soft {
+    .bento-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-      background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
-      padding: 4rem;
-      border-radius: 24px;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: minmax(130px, auto);
+      gap: var(--space-6);
     }
 
-    .hero-wave-soft .hero-img-box {
-      border-radius: 50% 50% 30% 70% / 50% 60% 40% 60%;
-      overflow: hidden;
-      box-shadow: 0 25px 50px rgba(var(--color-primary-rgb), 0.15);
-      aspect-ratio: 1;
-    }
-
-    .hero-wave-soft img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Dual Grid Layout */
-    .hero-dual-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .hero-dual-grid .hero-img-box {
-      display: grid;
-      grid-template-columns: 1fr;
-      position: relative;
-    }
-
-    .hero-dual-grid .hero-img-box img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-    }
-
-    /* Nature Collage Layout */
-    .hero-nature-collage {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .hero-nature-collage .hero-img-box {
-      padding: 1.5rem;
-      background-color: var(--color-bg-alt);
-      border-radius: 30px;
-      box-shadow: inset 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    .hero-nature-collage img {
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-      filter: sepia(0.1);
-    }
-
-    /* Caring Banner Layout */
-    .hero-caring-banner {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 3rem;
-      align-items: center;
-      background: var(--color-bg-alt);
-      padding: 5rem 3rem;
-      border-radius: 40px;
-    }
-
-    .hero-caring-banner .hero-img-box {
-      border-radius: 40px;
-      overflow: hidden;
-      box-shadow: 0 20px 45px rgba(var(--color-primary-rgb), 0.1);
-      border: 8px solid var(--color-white);
-    }
-
-    .hero-caring-banner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Dynamic Diagonal Layout */
-    .hero-dynamic-diagonal {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-      position: relative;
-    }
-
-    .hero-dynamic-diagonal .hero-img-box {
-      transform: skewY(-4deg);
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.18);
-      border-left: 6px solid var(--color-accent);
-    }
-
-    .hero-dynamic-diagonal img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transform: skewY(4deg) scale(1.1);
-    }
-
-    /* Feminine Curved Layout */
-    .hero-fem-curved {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .hero-fem-curved .hero-img-box {
-      border-radius: 60% 40% 70% 30% / 40% 50% 60% 50%;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(107,33,168,0.15);
-      border: 4px dashed var(--color-accent);
-      aspect-ratio: 1;
-    }
-
-    .hero-fem-curved img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Fashion Minimalist Layout */
-    .hero-fashion-minimal {
+    .bento-card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: var(--space-8);
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bento-card:hover {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border-color: var(--brand-secondary);
+    }
+
+    /* Bento Item Positioning Details */
+    .hero-main-card {
+      grid-column: span 8;
+      grid-row: span 3;
+      justify-content: center;
+      gap: var(--space-6);
+    }
+
+    .hero-spine-card {
+      grid-column: span 4;
+      grid-row: span 2;
       align-items: center;
-      text-align: center;
-      gap: 3rem;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
     }
 
-    .hero-fashion-minimal .hero-text-box {
-      max-width: 800px;
-    }
-
-    .hero-fashion-minimal .hero-img-box {
-      width: 100%;
-      max-width: 1000px;
-      border: 2px solid var(--color-primary);
-      padding: 1.5rem;
-      background: var(--color-bg);
-    }
-
-    .hero-fashion-minimal img {
-      width: 100%;
-      max-height: 550px;
-      object-fit: cover;
-    }
-
-    @media (max-width: 900px) {
-      .hero-split-organic, .hero-luxury-overlap, .hero-wave-soft, 
-      .hero-dual-grid, .hero-nature-collage, .hero-caring-banner, 
-      .hero-dynamic-diagonal, .hero-fem-curved {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
-      }
-      .hero-luxury-overlap .hero-text-box {
-        margin-right: 0;
-        padding: 2rem;
-      }
-      .hero-luxury-overlap .hero-img-box {
-        height: 400px;
-      }
-      .hero-wave-soft {
-        padding: 2rem;
-      }
-    }
-
-    /* Hero Typography */
-    .hero-title {
-      font-size: 3.5rem;
-      font-weight: 800;
-      margin-bottom: 1.5rem;
-      color: var(--color-primary);
-      letter-spacing: -1px;
-    }
-
-    .hero-subtitle {
-      font-size: 1.25rem;
-      margin-bottom: 2.5rem;
-      color: var(--color-text-muted);
-      max-width: 650px;
-    }
-
-    .hero-centered-clinical .hero-subtitle, 
-    .hero-fashion-minimal .hero-subtitle {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .hero-btn-group {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .hero-centered-clinical .hero-btn-group, 
-    .hero-fashion-minimal .hero-btn-group {
+    .hero-rating-card {
+      grid-column: span 4;
+      grid-row: span 1;
       justify-content: center;
     }
 
-    @media (max-width: 768px) {
+    .hero-location-card {
+      grid-column: span 4;
+      grid-row: span 1;
+      justify-content: center;
+      background-color: var(--brand-primary);
+      border-color: var(--brand-primary);
+      color: var(--color-white);
+    }
+
+    .hero-location-card p {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .hero-location-card .card-link {
+      color: var(--brand-accent);
+      font-weight: 600;
+    }
+
+    .hero-stats-card {
+      grid-column: span 8;
+      grid-row: span 1;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+    }
+
+    /* Bento Card Contents */
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      background-color: rgba(74, 124, 140, 0.1);
+      color: var(--brand-secondary);
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      width: fit-content;
+    }
+
+    [data-theme="dark"] .hero-badge {
+      color: var(--text-primary);
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-title {
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -1.5px;
+      text-transform: uppercase;
+    }
+
+    .hero-title span {
+      display: block;
+      color: var(--brand-secondary);
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      max-width: 600px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: var(--space-4);
+      margin-top: var(--space-4);
+    }
+
+    /* Google Stars Design */
+    .stars-container {
+      display: flex;
+      gap: 2px;
+      color: #ffb800;
+      margin-bottom: var(--space-2);
+    }
+
+    .stars-container svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .rating-heading {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    /* Custom Interactive Spine Art */
+    .spine-art-wrapper {
+      width: 100%;
+      height: 100%;
+      max-height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .spine-svg {
+      max-height: 250px;
+    }
+
+    @keyframes pulse-glow {
+      0% { filter: drop-shadow(0 0 2px var(--brand-accent)); opacity: 0.8; }
+      50% { filter: drop-shadow(0 0 12px var(--brand-accent)); opacity: 1; }
+      100% { filter: drop-shadow(0 0 2px var(--brand-accent)); opacity: 0.8; }
+    }
+
+    .glow-spine {
+      animation: pulse-glow 2s infinite ease-in-out;
+      cursor: pointer;
+    }
+
+    @keyframes nerve-flow {
+      0% { stroke-dashoffset: 20; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    .pulse-nerve {
+      stroke-dasharray: 8 4;
+      animation: nerve-flow 2s infinite linear;
+    }
+
+    .spine-tooltip {
+      position: absolute;
+      bottom: -10px;
+      background-color: var(--brand-primary);
+      color: var(--color-white);
+      padding: var(--space-2) var(--space-3);
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      pointer-events: none;
+      opacity: 0.8;
+      transition: opacity var(--transition-fast);
+      width: 100%;
+      font-weight: 600;
+    }
+
+    .hero-spine-card:hover .spine-tooltip {
+      opacity: 1;
+    }
+
+    /* Responsive Bento Grid */
+    @media (max-width: 1024px) {
+      .bento-grid {
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: minmax(130px, auto);
+      }
+
+      .hero-main-card {
+        grid-column: span 6;
+        grid-row: span 3;
+      }
+
+      .hero-spine-card {
+        grid-column: span 3;
+        grid-row: span 2;
+      }
+
+      .hero-rating-card {
+        grid-column: span 3;
+        grid-row: span 1;
+      }
+
+      .hero-location-card {
+        grid-column: span 3;
+        grid-row: span 1;
+      }
+
+      .hero-stats-card {
+        grid-column: span 6;
+        grid-row: span 1;
+      }
+      
       .hero-title {
         font-size: 2.5rem;
       }
-      .hero-subtitle {
-        font-size: 1.1rem;
-      }
-      .hero-btn-group {
-        flex-direction: column;
-        width: 100%;
-      }
-      .hero-btn-group .btn {
-        width: 100%;
-      }
-    }
-
-    /* Trust & Badges Section */
-    .badges-sec {
-      background-color: var(--color-bg-alt);
-      padding: 3rem 0;
-      border-top: 1px solid rgba(var(--color-primary-rgb), 0.06);
-      border-bottom: 1px solid rgba(var(--color-primary-rgb), 0.06);
-    }
-
-    .badges-container {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-
-    .badge-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .badge-icon {
-      font-size: 2.2rem;
-      color: var(--color-accent);
-    }
-
-    .badge-text h4 {
-      font-size: 1.1rem;
-      font-weight: 700;
-    }
-
-    .badge-text p {
-      font-size: 0.9rem;
-    }
-
-    /* Section Headers */
-    .section-header {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 5rem auto;
-    }
-
-    .section-header h2 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 1.2rem;
-      position: relative;
-      color: var(--color-primary);
-    }
-
-    .section-header p {
-      font-size: 1.1rem;
-    }
-
-    /* Card Styles for Services Grid */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2.5rem;
-    }
-
-    .card {
-      padding: 3rem 2.2rem;
-      transition: var(--transition-normal);
-      position: relative;
-    }
-
-    .card-icon {
-      font-size: 2.5rem;
-      color: var(--color-accent);
-      margin-bottom: 1.8rem;
-    }
-
-    .card h3 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-    }
-
-    /* Neumorphic Card */
-    .card-neumorphic {
-      background: var(--color-bg);
-      border-radius: 20px;
-      box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.02), -8px -8px 20px rgba(255,255,255,0.7);
-      border: 1px solid rgba(var(--color-primary-rgb), 0.03);
-    }
-
-    .card-neumorphic:hover {
-      transform: translateY(-5px);
-      box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.04), -12px -12px 25px rgba(255,255,255,0.9);
-      border-color: rgba(var(--color-primary-rgb), 0.08);
-    }
-
-    /* Glass Modern Card */
-    .card-glass-modern {
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(10px);
-      border-radius: 12px;
-      border: 1px solid rgba(var(--color-primary-rgb), 0.1);
-    }
-
-    .card-glass-modern:hover {
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.95);
-      border-color: var(--color-accent);
-      box-shadow: 0 20px 30px rgba(0,0,0,0.05);
-    }
-
-    /* Gold Frame Card */
-    .card-gold-frame {
-      background: var(--color-bg);
-      border: 1px solid rgba(var(--color-accent-rgb), 0.2);
-      border-radius: 4px;
-    }
-
-    .card-gold-frame::before {
-      content: '';
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      border: 1px solid rgba(var(--color-accent-rgb), 0.1);
-      pointer-events: none;
-    }
-
-    .card-gold-frame:hover {
-      border-color: var(--color-accent);
-      transform: scale(1.02);
-    }
-
-    /* Curved Glow Card */
-    .card-curved-glow {
-      background: var(--color-white);
-      border-radius: 30px 10px 30px 10px;
-      box-shadow: 0 10px 30px rgba(var(--color-primary-rgb), 0.04);
-      border: 1.5px solid transparent;
-    }
-
-    .card-curved-glow:hover {
-      border-color: var(--color-accent);
-      box-shadow: 0 15px 35px rgba(var(--color-accent-rgb), 0.15);
-      transform: translateY(-6px);
-    }
-
-    /* Solid Glow Card */
-    .card-solid-glow {
-      background: var(--color-primary);
-      color: var(--color-white);
-      border-radius: 16px;
-      border: 2px solid transparent;
-    }
-
-    .card-solid-glow h3 {
-      color: var(--color-white);
-    }
-
-    .card-solid-glow p {
-      color: rgba(255,255,255,0.7);
-    }
-
-    .card-solid-glow:hover {
-      border-color: var(--color-accent);
-      box-shadow: 0 15px 30px rgba(var(--color-accent-rgb), 0.3);
-      transform: translateY(-5px);
-    }
-
-    /* Thick Border Card */
-    .card-thick-border {
-      background: var(--color-bg);
-      border: 3px solid var(--color-primary);
-      border-radius: 16px;
-      box-shadow: 6px 6px 0 var(--color-accent);
-    }
-
-    .card-thick-border:hover {
-      transform: translate(-3px, -3px);
-      box-shadow: 9px 9px 0 var(--color-accent);
-    }
-
-    /* Pill Soft Card */
-    .card-pill-soft {
-      background: var(--color-bg-alt);
-      border-radius: 40px;
-      border: 2px solid var(--color-white);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.02);
-    }
-
-    .card-pill-soft:hover {
-      background: var(--color-white);
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.05);
-    }
-
-    /* High Contrast Card */
-    .card-high-contrast {
-      background: var(--color-white);
-      border-top: 4px solid var(--color-primary);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.06);
-      border-radius: 8px;
-    }
-
-    .card-high-contrast:hover {
-      border-top-color: var(--color-accent);
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    }
-
-    /* Lavender Mist Card */
-    .card-lavender-mist {
-      background: rgba(250, 245, 255, 0.8);
-      border: 1px solid rgba(107, 33, 168, 0.15);
-      border-radius: 24px;
-    }
-
-    .card-lavender-mist:hover {
-      background: var(--color-white);
-      box-shadow: 0 15px 30px rgba(107, 33, 168, 0.08);
-      transform: translateY(-5px);
-      border-color: var(--color-accent);
-    }
-
-    /* Clean Divider Card */
-    .card-clean-divider {
-      border-bottom: 1px solid rgba(var(--color-primary-rgb), 0.15);
-      padding: 2.5rem 0;
-    }
-
-    .card-clean-divider:hover {
-      border-bottom-color: var(--color-primary);
-      transform: translateX(10px);
-    }
-
-    /* About Section Styles */
-    .about-sec {
-      background-color: var(--color-bg-alt);
-    }
-
-    .about-content {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 5rem;
-      align-items: center;
-    }
-
-    @media (max-width: 900px) {
-      .about-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-    }
-
-    .about-text-box h3 {
-      font-size: 2.2rem;
-      font-weight: 800;
-      margin-bottom: 1.8rem;
-      color: var(--color-primary);
-    }
-
-    .about-text-box p {
-      margin-bottom: 1.5rem;
-      font-size: 1.05rem;
-    }
-
-    .about-image {
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-      border: 4px solid var(--color-white);
-    }
-
-    .about-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Diagnostic / Process Section */
-    .process-sec {
-      background-color: var(--color-bg);
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 3rem;
-      position: relative;
-    }
-
-    .process-step {
-      text-align: center;
-      position: relative;
-    }
-
-    .step-number {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background-color: var(--color-primary);
-      color: var(--color-white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin: 0 auto 2rem auto;
-      box-shadow: 0 10px 20px rgba(var(--color-primary-rgb), 0.2);
-    }
-
-    .process-step h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.8rem;
-      font-weight: 700;
-    }
-
-    .process-step p {
-      font-size: 0.95rem;
-    }
-
-    /* Testimonials Section */
-    .testi-sec {
-      background-color: var(--color-bg-alt);
-    }
-
-    .testi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2.5rem;
-    }
-
-    .testi-card {
-      background-color: var(--color-white);
-      padding: 2.5rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-      border: 1px solid rgba(var(--color-primary-rgb), 0.04);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .testi-quote {
-      font-style: italic;
-      font-size: 1.05rem;
-      color: var(--color-text);
-      margin-bottom: 1.8rem;
-    }
-
-    .testi-author {
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--color-primary);
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-
-    .testi-author::before {
-      content: '';
-      display: inline-block;
-      width: 20px;
-      height: 2px;
-      background-color: var(--color-accent);
-    }
-
-    /* Contact Section */
-    .contact-sec {
-      background-color: var(--color-bg);
-    }
-
-    .contact-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-    }
-
-    @media (max-width: 900px) {
-      .contact-content {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-    }
-
-    .contact-info-panel h3 {
-      font-size: 2.2rem;
-      font-weight: 800;
-      margin-bottom: 1.8rem;
-      color: var(--color-primary);
-    }
-
-    .contact-info-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.8rem;
-      margin-bottom: 3rem;
-    }
-
-    .contact-info-item {
-      display: flex;
-      gap: 1.2rem;
-      align-items: flex-start;
-    }
-
-    .contact-info-icon {
-      font-size: 1.5rem;
-      color: var(--color-accent);
-      margin-top: 0.2rem;
-    }
-
-    .contact-info-text h4 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-    }
-
-    .contact-info-text p, .contact-info-text a {
-      font-size: 1rem;
-      color: var(--color-text-muted);
-    }
-
-    /* Map card placeholder styling */
-    .map-card {
-      background: var(--color-bg-alt);
-      border-radius: 16px;
-      padding: 1.5rem;
-      border: 1px solid rgba(var(--color-primary-rgb), 0.08);
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .map-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .map-title {
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
-
-    .map-preview-img {
-      width: 100%;
-      height: 220px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #e2e8f0 25%, #cbd5e1 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-primary);
-      font-weight: 600;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(var(--color-primary-rgb), 0.1);
-    }
-
-    .map-preview-img::before {
-      content: '';
-      position: absolute;
-      width: 120%;
-      height: 120%;
-      background: radial-gradient(circle, transparent 20%, rgba(var(--color-primary-rgb), 0.05) 80%);
-    }
-
-    .map-pin {
-      font-size: 3rem;
-      color: #ef4444;
-      animation: bounce 2s infinite;
-      z-index: 2;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-
-    /* Contact Form */
-    .contact-form-panel {
-      background-color: var(--color-bg-alt);
-      padding: 3.5rem;
-      border-radius: 24px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
-      border: 1px solid rgba(var(--color-primary-rgb), 0.05);
     }
 
     @media (max-width: 768px) {
-      .contact-form-panel {
-        padding: 2rem;
+      .bento-grid {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .hero-main-card, .hero-spine-card, .hero-rating-card, .hero-location-card, .hero-stats-card {
+        grid-column: span 12;
+        grid-row: span 1;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+      
+      .hero-actions .btn {
+        width: 100%;
       }
     }
 
-    .contact-form-panel h3 {
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
+    /* STATS BAR SYSTEM */
+    .stats-container-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-4);
+      height: 100%;
+      width: 100%;
+    }
+
+    .stat-item {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: var(--space-4) var(--space-6);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: var(--font-family-headings);
+      font-size: 2.2rem;
       font-weight: 800;
+      color: var(--brand-accent);
+      line-height: 1;
+      margin-bottom: var(--space-1);
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+      .stats-container-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* ASYMMETRIC SERVICES GRID */
+    .services-section {
+      background-color: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .section-header {
+      margin-bottom: var(--space-16);
+      max-width: 650px;
+    }
+
+    .section-label {
+      font-family: var(--font-family-headings);
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--brand-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: var(--space-2);
+      display: block;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      margin-bottom: var(--space-4);
+    }
+
+    .asymmetric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+    }
+
+    .service-card {
+      background-color: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: var(--space-8);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 320px;
+      transition: all var(--transition-normal);
+      position: relative;
+    }
+
+    .service-card:hover {
+      background-color: var(--bg-secondary);
+      border-color: var(--brand-primary);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Asymmetric Spans (Swiss Modernism Grid Layout) */
+    .service-card.span-2 {
+      grid-column: span 2;
+    }
+
+    .service-icon-wrapper {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-sm);
+      background-color: rgba(74, 124, 140, 0.1);
+      color: var(--brand-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-6);
+      transition: background-color var(--transition-fast), color var(--transition-fast);
+    }
+
+    .service-card:hover .service-icon-wrapper {
+      background-color: var(--brand-accent);
+      color: var(--color-white);
+    }
+
+    .service-icon-wrapper svg {
+      width: 26px;
+      height: 26px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .service-card-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: var(--space-3);
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+    }
+
+    .service-card-desc {
+      font-size: 0.95rem;
+      margin-bottom: var(--space-6);
+      flex-grow: 1;
+    }
+
+    .service-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-family: var(--font-family-headings);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      color: var(--brand-secondary);
+      letter-spacing: 0.5px;
+    }
+
+    .service-card-link svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.5;
+      transition: transform var(--transition-fast);
+    }
+
+    .service-card:hover .service-card-link {
+      color: var(--brand-accent);
+    }
+
+    .service-card:hover .service-card-link svg {
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 991px) {
+      .asymmetric-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .service-card.span-2 {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .asymmetric-grid {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .service-card.span-2 {
+        grid-column: span 1;
+      }
+    }
+
+    /* WHY US / EVIDENCE-BASED CLINIC SECTION */
+    .why-us-section {
+      background-color: var(--bg-tertiary);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .why-us-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: var(--space-16);
+      align-items: center;
+    }
+
+    .why-us-visual {
+      background-color: var(--brand-primary);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      padding: var(--space-8);
+      border: 1px solid var(--border-color);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    .clinical-diagram-svg {
+      width: 100%" height="auto" max-height="400px";
+    }
+
+    .why-us-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+
+    .why-us-item {
+      display: flex;
+      gap: var(--space-4);
+    }
+
+    .why-us-number {
+      font-family: var(--font-family-headings);
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--brand-accent);
+      line-height: 1;
+    }
+
+    .why-us-item-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: var(--space-2);
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      .why-us-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-12);
+      }
+    }
+
+    /* REVIEWS / TESTIMONIALS SECTION */
+    .reviews-section {
+      background-color: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+    }
+
+    .review-card {
+      background-color: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: var(--space-8);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all var(--transition-normal);
+    }
+
+    .review-card:hover {
+      background-color: var(--bg-secondary);
+      border-color: var(--brand-secondary);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--space-4);
+    }
+
+    .review-stars {
+      display: flex;
+      color: #ffb800;
+    }
+
+    .review-stars svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    .review-source {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .review-text {
+      font-style: italic;
+      font-size: 0.95rem;
+      margin-bottom: var(--space-6);
+      line-height: 1.6;
+    }
+
+    .review-user {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    .review-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-round);
+      background-color: var(--brand-primary);
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-family-headings);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .review-user-info h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .review-user-info p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 900px) {
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* CTA / CONSULTATION BOOKING SECTION */
+    .cta-section {
+      background-color: var(--bg-tertiary);
+      position: relative;
+    }
+
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+
+    .cta-text-panel h2 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      margin-bottom: var(--space-4);
+    }
+
+    .cta-text-panel p {
+      font-size: 1.1rem;
+      margin-bottom: var(--space-6);
+    }
+
+    .cta-meta-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .cta-meta-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .cta-meta-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--brand-accent);
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.5;
+    }
+
+    /* Custom Form Styling */
+    .booking-form-box {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: var(--space-8);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
     }
 
     .form-group {
-      margin-bottom: 1.5rem;
+      margin-bottom: var(--space-4);
+      position: relative;
     }
 
     .form-group label {
       display: block;
-      margin-bottom: 0.6rem;
-      font-weight: 600;
-      font-size: 0.95rem;
+      font-family: var(--font-family-headings);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: var(--space-2);
+      color: var(--text-primary);
     }
 
     .form-control {
       width: 100%;
-      padding: 1rem 1.2rem;
-      border-radius: 8px;
-      border: 1px solid rgba(var(--color-primary-rgb), 0.15);
-      background-color: var(--color-white);
-      font-family: var(--font-body);
+      background-color: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: var(--space-3) var(--space-4);
+      font-family: var(--font-family-body);
       font-size: 0.95rem;
-      transition: var(--transition-normal);
+      color: var(--text-primary);
+      transition: all var(--transition-fast);
     }
 
     .form-control:focus {
       outline: none;
-      border-color: var(--color-primary);
-      box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.1);
+      border-color: var(--brand-secondary);
+      background-color: var(--bg-secondary);
     }
 
     textarea.form-control {
-      min-height: 130px;
       resize: vertical;
+      min-height: 100px;
     }
 
-    /* Footer */
+    /* Custom validation sparkle animation */
+    .form-group.is-valid .form-control {
+      border-color: #10b981;
+    }
+
+    .form-group.is-valid::after {
+      content: '✨';
+      position: absolute;
+      right: 12px;
+      bottom: 10px;
+      font-size: 1rem;
+      animation: sparkle 0.6s ease forwards;
+    }
+
+    @keyframes sparkle {
+      0% { transform: scale(0.6); opacity: 0; }
+      50% { transform: scale(1.3); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.9; }
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: var(--space-2);
+      height: 48px;
+    }
+
+    .btn-spinner {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 900px) {
+      .cta-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-12);
+      }
+    }
+
+    /* WAVE SVG DIVIDER BEFORE FOOTER */
+    .wave-container {
+      width: 100%;
+      background: transparent;
+      line-height: 0;
+      margin-top: -1px;
+    }
+
+    .wave-svg {
+      width: 100%;
+      height: 80px;
+      display: block;
+    }
+
+    /* FOOTER (CRITICAL SPEC) */
     footer {
-      background-color: var(--color-primary);
+      background-color: var(--color-navy);
       color: var(--color-white);
-      padding: 5rem 0 3rem 0;
+      padding-top: var(--space-16);
+      padding-bottom: var(--space-8);
       font-size: 0.95rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    footer p {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    footer h3, footer h4 {
+      color: var(--color-white);
+      font-family: var(--font-family-headings);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: var(--space-6);
+    }
+
+    footer h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    footer h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: var(--space-2);
+    }
+
+    footer h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background-color: var(--brand-accent);
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1.2fr;
-      gap: 4rem;
-      margin-bottom: 4rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      padding-bottom: 4rem;
+      grid-template-columns: 1.3fr 0.9fr 1fr 1.2fr;
+      gap: var(--space-12);
+      margin-bottom: var(--space-16);
     }
 
-    @media (max-width: 768px) {
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
+    /* Col 1: Brand */
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
     }
 
-    .footer-col h3, .footer-col h4 {
+    .footer-tagline {
+      font-size: 0.9rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: var(--space-3);
+      margin-top: var(--space-2);
+    }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-fast);
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .social-btn:hover {
+      background-color: var(--brand-accent);
       color: var(--color-white);
-      margin-bottom: 1.5rem;
-      font-weight: 700;
+      transform: translateY(-2px);
     }
 
-    .footer-col h3 {
-      font-size: 1.5rem;
-    }
-
-    .footer-col h4 {
-      font-size: 1.1rem;
-    }
-
-    .footer-col p {
-      color: rgba(255,255,255,0.7);
-      margin-bottom: 1.2rem;
-    }
-
-    .footer-links {
+    /* Col 2: Quick Links */
+    .footer-links-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.8rem;
+      gap: var(--space-3);
     }
 
-    .footer-links a {
+    .footer-link-item a {
+      color: rgba(255, 255, 255, 0.7);
+      transition: all var(--transition-fast);
+    }
+
+    .footer-link-item a:hover {
+      color: var(--brand-accent);
+      padding-left: var(--space-1);
+    }
+
+    /* Col 3: Contact */
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .contact-detail-item {
+      display: flex;
+      gap: var(--space-3);
+    }
+
+    .contact-detail-icon {
+      color: var(--brand-accent);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .contact-detail-icon svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.5;
+    }
+
+    .contact-detail-text p, .contact-detail-text a {
+      font-size: 0.95rem;
       color: rgba(255, 255, 255, 0.7);
     }
 
-    .footer-links a:hover {
-      color: var(--color-accent);
-      padding-left: 5px;
+    .contact-detail-text a:hover {
+      color: var(--color-white);
     }
 
+    /* Col 4: Maps */
+    .footer-map-container {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      line-height: 0;
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    .footer-map-container iframe {
+      filter: var(--map-filter);
+    }
+
+    /* Bottom copyright info */
     .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: var(--space-6);
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1.5rem;
-      color: rgba(255,255,255,0.6);
+      gap: var(--space-4);
+      color: rgba(255, 255, 255, 0.5);
       font-size: 0.85rem;
     }
 
-    .footer-bottom a {
-      color: rgba(255,255,255,0.6);
+    .footer-bottom-links {
+      display: flex;
+      gap: var(--space-4);
     }
 
-    .footer-bottom a:hover {
-      color: var(--color-accent);
+    .footer-bottom-links a {
+      color: rgba(255, 255, 255, 0.5);
     }
 
-    /* Fontawesome Icons */
-    .icon {
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-      stroke-width: 0;
-      stroke: currentColor;
-      fill: currentColor;
+    .footer-bottom-links a:hover {
+      color: var(--brand-accent);
     }
-    
+
+    @media (max-width: 991px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-8);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* INTERACTIVE WHIMSICAL INTERSECTIONOBSERVER REVEALS */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity var(--transition-slow) cubic-bezier(0.16, 1, 0.3, 1), transform var(--transition-slow) cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-on-scroll.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* FLOATING WHATSAPP BUTTON (PULSING) */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 60px;
+      height: 60px;
+      background-color: var(--whatsapp-green);
+      color: var(--color-white);
+      border-radius: var(--radius-round);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+      z-index: 1000;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+      cursor: pointer;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      background-color: var(--whatsapp-green-hover);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .whatsapp-float::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: var(--radius-round);
+      background-color: var(--whatsapp-green);
+      opacity: 0.55;
+      z-index: -1;
+      animation: pulse-ring 2.2s infinite cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes pulse-ring {
+      0% { transform: scale(1); opacity: 0.65; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+
+    /* PREMIUM TOAST NOTIFICATION */
+    .toast-notification {
+      position: fixed;
+      bottom: 2rem;
+      left: 2rem;
+      background-color: var(--brand-primary);
+      color: var(--color-white);
+      border-left: 4px solid var(--brand-accent);
+      padding: var(--space-4) var(--space-6);
+      border-radius: var(--radius-sm);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      z-index: 2000;
+      transform: translateY(150%);
+      transition: transform var(--transition-normal);
+    }
+
+    .toast-notification.show {
+      transform: translateY(0);
+    }
+
+    .toast-close {
+      background: none;
+      border: none;
+      color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    .toast-close:hover {
+      color: var(--color-white);
+    }
+
+    /* Accessibility settings for reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
   </style>
 </head>
 <body>
-  
-  <header>
+
+  <!-- Sticky Header -->
+  <header id="main-header">
     <div class="container nav-container">
-      <a href="#" class="logo">Physio Spine Care</a>
-      <nav class="nav-links">
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#about" class="nav-link">About Us</a>
-        <a href="#process" class="nav-link">Our Approach</a>
-        <a href="#testimonials" class="nav-link">Reviews</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <a href="tel:+918824786777" class="btn btn-secondary" style="padding: 0.6rem 1.5rem; font-size: 0.85rem;">
-          Call +91 88247 86777
-        </a>
+      <a href="#" class="logo" id="header-logo">
+        Physio Spine<span>Care</span>
+      </a>
+      
+      <nav class="nav-links" id="main-nav">
+        <a href="#services" class="nav-link">Programs</a>
+        <a href="#why-us" class="nav-link">Our Approach</a>
+        <a href="#reviews" class="nav-link">Patient Stories</a>
+        <a href="#contact-booking" class="nav-link">Consultation</a>
       </nav>
+
+      <div class="nav-actions">
+        <!-- Click-to-call (CRITICAL SPEC) -->
+        <a href="tel:+918824786777" class="btn btn-secondary" style="padding: var(--space-2) var(--space-4); font-size: 0.85rem;" id="nav-call-btn">
+          Call Clinic
+        </a>
+
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Color Theme">
+          <svg class="moon-icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <!-- Hamburger Icon -->
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
-    
-  <section class="hero-sec">
+
+  <!-- Hero Section (Bento Grid Layout) -->
+  <section class="hero-section grid-lines">
     <div class="container">
+      <div class="bento-grid">
+        
+        <!-- Cell A: Heading & Call to Action (2/3 width) -->
+        <div class="bento-card hero-main-card">
+          <div class="hero-badge">Clinical Excellence in Gurugram</div>
+          <h1 class="hero-title">Expert Spine Care.<span>Precise Results.</span></h1>
+          <p class="hero-description text-secondary">
+            Physio Spine Care specializes in target spine and orthopedic physiotherapy. We restore optimal biomechanical alignment, relieve severe neural irritation, and protect long-term spinal mobility.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact-booking" class="btn btn-accent" id="hero-book-btn">Book Consultation</a>
+            <a href="tel:+918824786777" class="btn btn-secondary">Call +91 88247 86777</a>
+          </div>
+        </div>
+
+        <!-- Cell B: Spine Visualizer (1/3 width, interactive) -->
+        <div class="bento-card hero-spine-card">
+          <div class="spine-art-wrapper">
+            <svg viewBox="0 0 200 400" width="100%" height="100%" class="spine-svg" xmlns="http://www.w3.org/2000/svg">
+              <line x1="100" y1="20" x2="100" y2="380" stroke="var(--brand-secondary)" stroke-width="4" stroke-dasharray="8 6" opacity="0.4"/>
+              
+              <!-- Cervical Vertebrae -->
+              <rect x="86" y="30" width="28" height="12" rx="3" fill="var(--brand-primary)"/>
+              <rect x="83" y="48" width="34" height="12" rx="3" fill="var(--brand-primary)"/>
+              <rect x="80" y="66" width="40" height="12" rx="3" fill="var(--brand-primary)"/>
+              
+              <!-- Thoracic Vertebrae -->
+              <rect x="78" y="90" width="44" height="14" rx="3" fill="var(--brand-primary)"/>
+              <rect x="76" y="110" width="48" height="14" rx="3" fill="var(--brand-primary)"/>
+              <rect x="74" y="130" width="52" height="14" rx="3" fill="var(--brand-primary)"/>
+              
+              <!-- Active Spine Pain Glow Zone (L4-L5 lumbar segment) -->
+              <rect x="70" y="152" width="60" height="16" rx="3" fill="var(--brand-accent)" class="glow-spine" id="glow-vertebra"/>
+              <circle cx="100" cy="160" r="7" fill="var(--bg-secondary)"/>
+              <circle cx="100" cy="160" r="3.5" fill="var(--brand-accent)"/>
+              
+              <!-- Sciatic nerve pathways branching off -->
+              <path d="M 70 160 Q 40 155 20 180" stroke="var(--brand-accent)" stroke-width="2.5" fill="none" class="pulse-nerve"/>
+              <path d="M 130 160 Q 160 155 180 180" stroke="var(--brand-accent)" stroke-width="2.5" fill="none" class="pulse-nerve"/>
+              
+              <rect x="72" y="176" width="56" height="16" rx="3" fill="var(--brand-primary)"/>
+              <rect x="70" y="200" width="60" height="16" rx="3" fill="var(--brand-primary)"/>
+              <rect x="68" y="224" width="64" height="18" rx="3" fill="var(--brand-primary)"/>
+              <rect x="66" y="248" width="68" height="18" rx="3" fill="var(--brand-primary)"/>
+              
+              <!-- Lumbar Vertebrae -->
+              <rect x="64" y="278" width="72" height="18" rx="3" fill="var(--brand-primary)"/>
+              <rect x="62" y="306" width="76" height="20" rx="3" fill="var(--brand-primary)"/>
+              <rect x="60" y="332" width="80" height="20" rx="3" fill="var(--brand-primary)"/>
+              
+              <!-- Sacrum base -->
+              <path d="M 70 360 L 130 360 L 112 388 L 88 388 Z" fill="var(--brand-secondary)"/>
+            </svg>
+            <div class="spine-tooltip">L4-L5 Lumbar Segments: Active Sciatica Relief Target</div>
+          </div>
+        </div>
+
+        <!-- Cell C: Rating Badge (1/3 width) -->
+        <div class="bento-card hero-rating-card">
+          <div>
+            <div class="stars-container">
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            </div>
+            <h3 class="rating-heading">4.8 Stars</h3>
+            <p class="text-secondary" style="font-size: 0.9rem;">From 91 Verified Google Reviews</p>
+          </div>
+          <a href="#reviews" class="card-link" style="font-weight: 700; text-transform: uppercase; font-size: 0.8rem; color: var(--brand-secondary); margin-top: var(--space-3);">Read Patient Logs →</a>
+        </div>
+
+        <!-- Cell D: Location/Operating Hours (1/3 width) -->
+        <div class="bento-card hero-location-card">
+          <div>
+            <h3 class="rating-heading" style="color: var(--color-white); font-weight: 800; font-size: 1.3rem;">GURUGRAM CLINIC</h3>
+            <p style="font-size: 0.9rem; margin-top: var(--space-2);">Sector 45, Gurugram, Haryana, India</p>
+            <p style="font-size: 0.85rem; opacity: 0.8; margin-top: var(--space-1);">Open Mon - Sat (9am - 8pm)</p>
+          </div>
+          <a href="#footer-location-map" class="card-link">View Route Map →</a>
+        </div>
+
+        <!-- Cell E: Stats Bar Overlay (2/3 width, contains the requested counter stats bar) -->
+        <div class="bento-card hero-stats-card">
+          <!-- Stats bar container (CRITICAL SPEC with counter animation) -->
+          <div class="stats-container-grid" id="stats-section">
+            
+            <div class="stat-item">
+              <span class="stat-number" data-target="91">0</span>
+              <span class="stat-label">Google Reviews</span>
+            </div>
+            
+            <div class="stat-item">
+              <!-- Using standard decimals animation -->
+              <span class="stat-number" data-target="4.8">0</span>
+              <span class="stat-label">Clinic Rating</span>
+            </div>
+            
+            <div class="stat-item">
+              <span class="stat-number" data-target="10">0</span>
+              <span class="stat-label">Years of Care</span>
+            </div>
+            
+            <div class="stat-item">
+              <span class="stat-number" data-target="5000">0</span>
+              <span class="stat-label">Recoveries</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section (Asymmetric Service Grid) -->
+  <section id="services" class="services-section section-padding reveal-on-scroll">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Medical Specialty</span>
+        <h2 class="section-title">Spine & Orthopedic Programs</h2>
+        <p>Physio Spine Care applies target diagnostics and mechanical correction protocols to eliminate deep spinal pain patterns.</p>
+      </div>
+
+      <div class="asymmetric-grid">
+        
+        <!-- Service 1: Spine Pain Management (spans 2 columns on desktop) -->
+        <div class="service-card span-2">
+          <div>
+            <div class="service-icon-wrapper">
+              <!-- Inline Spine SVG -->
+              <svg viewBox="0 0 24 24"><path d="M12 2v20M8 5h8M7 9h10M6 13h12M7 17h10M8 21h8"/></svg>
+            </div>
+            <h3 class="service-card-title">Spine Pain Management</h3>
+            <p class="service-card-desc text-secondary">
+              Clinical diagnostic protocols to isolate myofascial and articular back pain. We apply non-surgical mechanical decompression, spinal mobilization, and neuromuscular re-education to alleviate chronic stiffness and nerve root compression.
+            </p>
+          </div>
+          <a href="#contact-booking" class="service-card-link">
+            Request Protocol <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Service 2: Herniated Disc Treatment -->
+        <div class="service-card">
+          <div>
+            <div class="service-icon-wrapper">
+              <!-- Inline Disc SVG -->
+              <svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="10" ry="5"/><ellipse cx="12" cy="12" rx="4" ry="2" fill="var(--brand-accent)" opacity="0.3"/><circle cx="12" cy="12" r="2" fill="var(--brand-accent)"/></svg>
+            </div>
+            <h3 class="service-card-title">Herniated Disc</h3>
+            <p class="service-card-desc text-secondary">
+              Targeted directional therapy to retract disc bulges, release intervertebral pressure, and resolve localized inflammatory responses.
+            </p>
+          </div>
+          <a href="#contact-booking" class="service-card-link">
+            Request Protocol <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Service 3: Sciatica Relief -->
+        <div class="service-card">
+          <div>
+            <div class="service-icon-wrapper">
+              <!-- Inline Nerve Pathway SVG -->
+              <svg viewBox="0 0 24 24"><path d="M12 2c0 4 3 6 3 10s-3 6-3 10M9 6s3 2 3 6-3 6-3 6"/></svg>
+            </div>
+            <h3 class="service-card-title">Sciatica Relief</h3>
+            <p class="service-card-desc text-secondary">
+              Decompressing the sciatic nerve path at the piriformis and lumbar roots. Eliminates radiating leg pain and restores muscle power.
+            </p>
+          </div>
+          <a href="#contact-booking" class="service-card-link">
+            Request Protocol <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Service 4: Post-Surgery Spine Rehab -->
+        <div class="service-card">
+          <div>
+            <div class="service-icon-wrapper">
+              <!-- Inline Rehab Shield SVG -->
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM12 8v8M9 12h6"/></svg>
+            </div>
+            <h3 class="service-card-title">Post-Surgery Rehab</h3>
+            <p class="service-card-desc text-secondary">
+              Guided rehabilitation following spinal fusion, microdiscectomy, or laminectomy to build spinal stability and core strength.
+            </p>
+          </div>
+          <a href="#contact-booking" class="service-card-link">
+            Request Protocol <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Service 5: Scoliosis Management (spans 2 columns on desktop) -->
+        <div class="service-card span-2">
+          <div>
+            <div class="service-icon-wrapper">
+              <!-- Inline Alignment SVG -->
+              <svg viewBox="0 0 24 24"><path d="M8 2a4 4 0 0 0 4 4 4 4 0 0 0 4-4M16 22a4 4 0 0 0-4-4 4 4 0 0 0-4 4M12 6v12M12 12H4M12 12h8"/></svg>
+            </div>
+            <h3 class="service-card-title">Scoliosis Management</h3>
+            <p class="service-card-desc text-secondary">
+              Three-dimensional therapy protocols to halt lateral curve progression. Combining postural awareness exercises, breathing mechanics retraining, and core bracing routines to achieve structural stabilization.
+            </p>
+          </div>
+          <a href="#contact-booking" class="service-card-link">
+            Request Protocol <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Service 6: Sports Spine Injuries -->
+        <div class="service-card">
+          <div>
+            <div class="service-icon-wrapper">
+              <!-- Inline Runner/Force SVG -->
+              <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="service-card-title">Sports Spine Injuries</h3>
+            <p class="service-card-desc text-secondary">
+              Rapid physical therapy for sports-related hyper-extension, vertebral sprains, and mechanical instability. Returns athletes safely to full play.
+            </p>
+          </div>
+          <a href="#contact-booking" class="service-card-link">
+            Request Protocol <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section id="why-us" class="why-us-section section-padding reveal-on-scroll">
+    <div class="container">
+      <div class="why-us-grid">
+        
+        <!-- Clinical Diagram Visual -->
+        <div class="why-us-visual">
+          <svg viewBox="0 0 400 300" class="clinical-diagram-svg" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="none"/>
+            <circle cx="200" cy="150" r="110" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+            <circle cx="200" cy="150" r="70" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+            
+            <!-- Structural Axes -->
+            <line x1="200" y1="10" x2="200" y2="290" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="5 5"/>
+            <line x1="10" y1="150" x2="390" y2="150" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="5 5"/>
+            
+            <!-- Spinal Alignment Vector Representation -->
+            <path d="M 200 40 C 215 100, 185 200, 200 260" fill="none" stroke="var(--brand-accent)" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="200" cy="40" r="6" fill="#fff"/>
+            <circle cx="200" cy="260" r="6" fill="#fff"/>
+            <circle cx="200" cy="150" r="8" fill="var(--brand-accent)"/>
+            
+            <!-- Force vectors labels -->
+            <text x="220" y="80" fill="#fff" font-family="Outfit" font-size="11" font-weight="600">COMPRESSION OFFSET</text>
+            <text x="70" y="220" fill="#fff" font-family="Outfit" font-size="11" font-weight="600">ALIGNMENT AXIS</text>
+          </svg>
+        </div>
+
+        <div class="why-us-content">
+          <div class="section-header" style="margin-bottom: var(--space-4);">
+            <span class="section-label">Clinical Protocols</span>
+            <h2 class="section-title">Evidence-Based Methodology</h2>
+          </div>
+
+          <div class="why-us-item">
+            <span class="why-us-number">01</span>
+            <div>
+              <h3 class="why-us-item-title">Customized Diagnostics</h3>
+              <p>We reject standard prescriptions. Every spinal mobilization program begins with an evaluation of your neurological pathways and muscle control.</p>
+            </div>
+          </div>
+
+          <div class="why-us-item">
+            <span class="why-us-number">02</span>
+            <div>
+              <h3 class="why-us-item-title">Spinal Decompression</h3>
+              <p>We utilize targeted mechanical traction and structural mobilization to naturally reverse intervertebral disk bulges.</p>
+            </div>
+          </div>
+
+          <div class="why-us-item">
+            <span class="why-us-number">03</span>
+            <div>
+              <h3 class="why-us-item-title">Ergonomic Correction</h3>
+              <p>Our treatment programs correct your workspace habits and alignment anomalies to prevent pain patterns from returning.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="reviews" class="reviews-section section-padding reveal-on-scroll">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Verified Recovery Logs</span>
+        <h2 class="section-title">Patient Testimonials</h2>
+        <p>Physio Spine Care has helped over 5,000 patients recover their quality of life. Read their real, verified Google reviews.</p>
+      </div>
+
+      <div class="reviews-grid">
+        
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-stars">
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            </div>
+            <span class="review-source">Google</span>
+          </div>
+          <p class="review-text">
+            "I was struggling with severe L4-L5 herniated disc bulges and sciatica for 8 months. The clinic designed a custom decompression therapy protocol. Within 6 weeks, my leg pain completely vanished. Highly systematic!"
+          </p>
+          <div class="review-user">
+            <div class="review-avatar">AS</div>
+            <div class="review-user-info">
+              <h4>Arjun Sharma</h4>
+              <p>Verified Patient, Gurugram</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-stars">
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            </div>
+            <span class="review-source">Google</span>
+          </div>
+          <p class="review-text">
+            "Extremely professional orthopedic rehabilitation. Following my knee arthroscopy, the therapist mapped out a staged mobility plan. I recovered 100% flexion ahead of schedule. Highly recommended clinic!"
+          </p>
+          <div class="review-user">
+            <div class="review-avatar">PP</div>
+            <div class="review-user-info">
+              <h4>Priya Patel</h4>
+              <p>Verified Patient, Gurugram</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-stars">
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+            </div>
+            <span class="review-source">Google</span>
+          </div>
+          <p class="review-text">
+            "Experienced severe postural neck stiffness and radiating pain down the arm. They corrected my alignment and analyzed my desk setup. Pain has gone away and hasn't returned. Fantastic clinical service."
+          </p>
+          <div class="review-user">
+            <div class="review-avatar">VS</div>
+            <div class="review-user-info">
+              <h4>Vikram Singh</h4>
+              <p>Verified Patient, Gurugram</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section: Book Your Spine Consultation (MUST HAVE) -->
+  <section id="contact-booking" class="cta-section section-padding reveal-on-scroll">
+    <div class="container">
+      <div class="cta-grid">
+        
+        <!-- Text details -->
+        <div class="cta-text-panel">
+          <span class="section-label">Restoration Pathway</span>
+          <h2>Book Your Spine Consultation</h2>
+          <p>Consult with our lead physiotherapist to isolate your pain pattern and design a structured path to recovery.</p>
+          
+          <div class="cta-meta-list">
+            <div class="cta-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Detailed spinal alignment mapping</span>
+            </div>
+            <div class="cta-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Staged active rehabilitation program</span>
+            </div>
+            <div class="cta-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>GMB Verified Local Clinic in Gurugram</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form box -->
+        <div class="booking-form-box">
+          <form id="consultation-form" novalidate>
+            <div class="form-group" id="group-name">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required minlength="3">
+            </div>
+            
+            <div class="form-group" id="group-phone">
+              <label for="phone">Phone Number</label>
+              <!-- Click to call mapping matching tel prefix -->
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter 10-digit mobile number" required pattern="[0-9]{10}">
+            </div>
+
+            <div class="form-group" id="group-message">
+              <label for="message">Describe Your Spine / Joint Issue</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Describe symptoms or conditions you are suffering from..." required minlength="10"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-accent submit-btn" id="btn-submit-booking">
+              <span class="btn-text">Book Spine Consultation</span>
+              <span class="btn-spinner"></span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave SVG divider (MUST HAVE) -->
+  <div class="wave-container">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" class="wave-svg">
+      <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="var(--color-navy)"></path>
+    </svg>
+  </div>
+
+  <!-- Footer (CRITICAL SPEC) -->
+  <footer>
+    <div class="container footer-grid">
       
-      <div class="hero-centered-clinical">
-        <span style="background: rgba(var(--color-accent-rgb), 0.15); color: var(--color-primary); padding: 0.4rem 1.2rem; border-radius: 4px; font-weight: 700; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">
-          Physiotherapy / Spine & Orthopedic
-        </span>
-        <h1 class="hero-title">Expert Spine Care,Lasting Relief.</h1>
-        <p class="hero-subtitle">We help you break free from chronic spine and joint issues. Our clinical approach in Gurugram combines hands-on physical therapy with target neuromuscular conditioning for permanent results.</p>
-        <div class="hero-btn-group">
-          <a href="#contact" class="btn btn-primary">Book Rehabilitation Session</a>
-          <a href="#services" class="btn btn-secondary">Our Clinical Programs</a>
-        </div>
-        <div class="hero-img-box">
-          <img src="assets/hero.png" alt="Physio Spine Care spine and joints therapy">
-        </div>
-      </div>
+      <!-- Col 1: Logo + Tagline + Social Icons -->
+      <div class="footer-brand">
+        <h3>Physio Spine Care</h3>
+        <p class="footer-tagline">Providing target, evidence-based spine and joint rehabilitation. Restoring alignment, eliminating pain, and protecting structural mobility.</p>
         
-    </div>
-  </section>
-    
-  <section id="services" class="section-padding">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our Specialized Treatments</h2>
-        <p>Providing evidence-based, patient-centric clinical therapies for long-term health restoration.</p>
-      </div>
-      <div class="cards-grid">
-        
-        <div class="card card-glass-modern">
-          <div class="card-icon">01</div>
-          <h3>Spine Rehabilitation</h3>
-          <p>Evidence-based decompression and posture protocols for herniated discs, sciatica, neck pain, and chronic lower back issues.</p>
-        </div>
-        
-        <div class="card card-glass-modern">
-          <div class="card-icon">02</div>
-          <h3>Orthopedic Physiotherapy</h3>
-          <p>Targeted recovery for structural joint degeneration, arthritis, fractures, and skeletal stiffness.</p>
-        </div>
-        
-        <div class="card card-glass-modern">
-          <div class="card-icon">03</div>
-          <h3>Post-Surgical Rehab</h3>
-          <p>Graduated mobilization programs ensuring optimal ligament, bone, and structural joint repair post-surgery.</p>
-        </div>
-        
-        <div class="card card-glass-modern">
-          <div class="card-icon">04</div>
-          <h3>Sports Injury Clinic</h3>
-          <p>Targeted protocols for competitive athletes and active individuals recovering from soft tissue damage.</p>
-        </div>
-        
-        <div class="card card-glass-modern">
-          <div class="card-icon">05</div>
-          <h3>Manual Joint Therapy</h3>
-          <p>Hands-on manipulations, joint mobilization, myofascial releases, and neurodynamics.</p>
-        </div>
-        
-        <div class="card card-glass-modern">
-          <div class="card-icon">06</div>
-          <h3>Ergonomic Correction</h3>
-          <p>Corrects structural posture errors caused by sedentary office setups and repetitive loading.</p>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-    
-  <section class="badges-sec">
-    <div class="container badges-container">
-      <div class="badge-item">
-        <div class="badge-icon">⭐</div>
-        <div class="badge-text">
-          <h4>4.8 Google Rating</h4>
-          <p>Based on 91 Verified Patient Reviews</p>
-        </div>
-      </div>
-      <div class="badge-item">
-        <div class="badge-icon">✔️</div>
-        <div class="badge-text">
-          <h4>GMB Verified</h4>
-          <p>Local Health Practitioner in Gurugram</p>
-        </div>
-      </div>
-      <div class="badge-item">
-        <div class="badge-icon">📅</div>
-        <div class="badge-text">
-          <h4>Flexible Bookings</h4>
-          <p>Easy home & clinic session scheduling</p>
-        </div>
-      </div>
-    </div>
-  </section>
-    
-  <section id="process" class="section-padding">
-    <div class="container">
-      <div class="section-header">
-        <h2>Your Treatment Pathway</h2>
-        <p>A structured, stage-by-stage methodology to safely target pain and ensure permanent recovery.</p>
-      </div>
-      <div class="process-grid">
-        <div class="process-step">
-          <div class="step-number">1</div>
-          <h3>Detailed Assessment</h3>
-          <p>We examine nerve pathways, muscle stiffness, alignment abnormalities, and medical history to isolate root issues.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-number">2</div>
-          <h3>Custom Plan Design</h3>
-          <p>We map out a targeted program specifying mobilization techniques, treatments, and sessions required.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-number">3</div>
-          <h3>Active Therapy</h3>
-          <p>Hands-on clinical mobilization combined with evidence-based tech treatments to accelerate tissue healing.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-number">4</div>
-          <h3>Sustainable Conditioning</h3>
-          <p>Empowering you with ergonomic guidelines, home exercises, and posture conditioning to protect you long-term.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-    
-  <section id="about" class="section-padding about-sec">
-    <div class="container about-content">
-      <div class="about-text-box">
-        <h3>About Our Clinic</h3>
-        <p>Located in Gurugram,Physio Spine Care Physiotherapy Clinicspecializes in treating complex spinal conditions, orthopedic disorders, and sports-related injuries. Our practitioners combine manual adjustments, clinical spinal decompression, and targeted core stabilization exercises. We design evidence-based rehabilitation programs tailored to your specific biomechanics, ensuring permanent recovery and preventing future injury recurrence.</p>
-        <p>We combine advanced diagnostics with personalized attention. Every practitioner on our team is dedicated to providing high-quality care, respecting clinical safety guidelines, and ensuring your physical comfort.</p>
-        <a href="#contact" class="btn btn-primary" style="margin-top: 1.5rem;">Speak with an Expert</a>
-      </div>
-      <div class="about-image">
-        <img src="assets/hero.png" alt="Clinical consultation desk">
-      </div>
-    </div>
-  </section>
-    
-  <section id="testimonials" class="section-padding testi-sec">
-    <div class="container">
-      <div class="section-header">
-        <h2>What Our Patients Say</h2>
-        <p>Read raw, verified reviews from individuals who have successfully completed treatments at our clinic.</p>
-      </div>
-      <div class="testi-grid">
-        
-        <div class="testi-card">
-          <p class="testi-quote">"Highly professional team. Following post-surgical knee reconstruction, I was looking for a clinic to regain flexion and strength. The customized active recovery workouts and hands-on massage helped me return to running ahead of schedule."</p>
-          <div class="testi-author">Verified Patient</div>
-        </div>
-        
-        <div class="testi-card">
-          <p class="testi-quote">"I suffered from severe L4-L5 disc bulges and sciatic nerve pain that radiated down my leg. After six weeks of targeted rehabilitation therapy here, I can stand, walk, and exercises completely pain-free. The approach is scientific and highly effective."</p>
-          <div class="testi-author">Verified Patient</div>
-        </div>
-        
-        <div class="testi-card">
-          <p class="testi-quote">"Outstanding clinical diagnostic service. I visited due to recurring neck stiffness and tension headaches from prolonged desk work. The therapist analyzed my alignment and corrected my work ergonomics. The headaches stopped within three treatments."</p>
-          <div class="testi-author">Verified Patient</div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-    
-  <section id="contact" class="section-padding">
-    <div class="container contact-content">
-      <div class="contact-info-panel">
-        <h3>Contact Us</h3>
-        <p style="margin-bottom: 2rem;">Get in touch to book your physical assessment or skin consultation. We respond to all inquiries within 2 hours during working hours.</p>
-        <div class="contact-info-list">
-          <div class="contact-info-item">
-            <div class="contact-info-icon">📍</div>
-            <div class="contact-info-text">
-              <h4>Clinic Address</h4>
-              <p>Gurugram, Haryana, India</p>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon">📞</div>
-            <div class="contact-info-text">
-              <h4>Call Clinic</h4>
-              <a href="tel:+918824786777">+91 88247 86777</a>
-            </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon">⏰</div>
-            <div class="contact-info-text">
-              <h4>Operating Hours</h4>
-              <p>Monday - Saturday: 9:00 AM - 8:00 PM<br>Sunday: By Appointment Only</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="map-card">
-          <div class="map-header">
-            <div class="map-title">Location Map</div>
-            <span style="font-size: 0.85rem; color: var(--color-accent); font-weight: 700;">GMB Verified Location</span>
-          </div>
-          <div class="map-preview-img">
-            <span class="map-pin">📍</span>
-            <div style="position: absolute; bottom: 1rem; left: 1rem; right: 1rem; background: var(--color-white); padding: 0.8rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-size: 0.85rem; text-align: center;">
-              Gurugram, Haryana, India
-            </div>
-          </div>
-          <a href="https://www.google.com/maps/place/ChIJEa4F9GAZDTkRXD8sH1gOga8" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%; text-align: center;">
-            Open in Google Maps
+        <!-- Social Icons -->
+        <div class="social-links">
+          <a href="https://www.facebook.com/physiospinecare" class="social-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/physiospinecare" class="social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://linkedin.com" class="social-btn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7H9.33V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z"/>
+            </svg>
           </a>
         </div>
       </div>
-      
-      <div class="contact-form-panel">
-        <h3>Book Appointment</h3>
-        <p style="margin-bottom: 2rem; color: var(--color-text-muted);">Fill out the form below, and our care coordinator will reach out to confirm your slot.</p>
-        <form onsubmit="event.preventDefault(); alert('Thank you for booking! We will contact you shortly to confirm your slot.');">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your 10-digit mobile number" required>
-          </div>
-          <div class="form-group">
-            <label for="concern">Your Health/Skin Concern</label>
-            <select id="concern" name="concern" class="form-control" required>
-              <option value="" disabled selected>Select concern...</option>
-              <option value="consultation">General Consultation</option>
-              <option value="pain">Chronic Pain / Stiffness</option>
-              <option value="sports">Sports Injury Rehabilitation</option>
-              <option value="skincare">Skin Treatment / Facial Glow</option>
-              <option value="laser">Laser Skin Care</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Describe your issue (optional)</label>
-            <textarea id="message" name="message" class="form-control" placeholder="Describe symptoms or conditions you are suffering from..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Confirm Booking Request</button>
-        </form>
-      </div>
-    </div>
-  </section>
-    
-  <footer>
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <h3>Physio Spine Care</h3>
-        <p>Expert clinical solutions in Gurugram, India. Rebuilding strength, mobility, and confidence with evidence-based, patient-focused protocols.</p>
-        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">© 2026 Physio Spine Care. All Rights Reserved.</p>
-      </div>
-      <div class="footer-col">
+
+      <!-- Col 2: Quick Links -->
+      <div class="footer-links">
         <h4>Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="#services">Our Services</a></li>
-          <li><a href="#about">About Our Clinic</a></li>
-          <li><a href="#process">Treatment Pathway</a></li>
-          <li><a href="#testimonials">Patient Reviews</a></li>
-          <li><a href="#contact">Contact & Map</a></li>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="#services">Our Programs</a></li>
+          <li class="footer-link-item"><a href="#why-us">Our Approach</a></li>
+          <li class="footer-link-item"><a href="#reviews">Patient Reviews</a></li>
+          <li class="footer-link-item"><a href="#contact-booking">Book Consultation</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Local Information</h4>
-        <p><strong>Address:</strong> Gurugram, Haryana, India</p>
-        <p><strong>Phone:</strong> +91 88247 86777</p>
-        <p><strong>Google Rating:</strong> 4.8 ⭐ (91 reviews)</p>
-        <p><a href="https://www.google.com/maps/place/ChIJEa4F9GAZDTkRXD8sH1gOga8" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent); font-weight: 600;">View Profile on Google Maps →</a></p>
+
+      <!-- Col 3: Contact Info -->
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <div class="contact-detail-item">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <p>Call Clinic</p>
+            <a href="tel:+918824786777" style="font-weight: 700;">+91 88247 86777</a>
+          </div>
+        </div>
+
+        <div class="contact-detail-item">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <p>Address</p>
+            <p style="font-weight: 600;">Sector 45, Gurugram, Haryana, India</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="container footer-bottom">
-      <div>Professional Physiotherapy / Spine & Orthopedic Website. Gurugram, Haryana.</div>
+
+      <!-- Col 4: Mini Google Maps Embed -->
       <div>
-        <a href="#about">Privacy Policy</a> | <a href="#about">Terms of Use</a>
+        <h4>Location Map</h4>
+        <div class="footer-map-container" id="footer-location-map">
+          <!-- Mini Google Maps Iframe -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.8286950220375!2d77.07065977626768!3d28.4545582921503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18e1abffffff%3A0xe54e63717df3f248!2sSector%2045%2C%20Gurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1717800000000!5m2!1sen!2sin" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Map location of Physio Spine Care Gurugram"></iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom copyrights -->
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Physio Spine Care. All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#services">Privacy Policy</a>
+        <a href="#services">Terms of Service</a>
       </div>
     </div>
   </footer>
+
+  <!-- Floating WhatsApp pulsing button (MUST HAVE) -->
+  <a href="https://wa.me/918824786777" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact clinic on WhatsApp" id="whatsapp-float-btn">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+      <path d="M12.031 2a9.967 9.967 0 0 0-9.969 9.97c0 1.887.525 3.73 1.522 5.34l-1.623 5.93 6.075-1.594A9.914 9.914 0 0 0 12.03 22a9.967 9.967 0 0 0 9.969-9.97A9.967 9.967 0 0 0 12.031 2zm0 1.8c4.512 0 8.169 3.657 8.169 8.17 0 4.513-3.657 8.17-8.17 8.17a8.125 8.125 0 0 1-4.148-1.13l-.297-.176-3.61.947.964-3.523-.193-.307a8.13 8.13 0 0 1-1.258-4.22c0-4.513 3.657-8.17 8.17-8.17zm-3.6 3.6a.9.9 0 0 0-.663.308c-.26.284-.663.781-.663 1.9s.817 2.2 1.03 2.5a4.7 4.7 0 0 0 1.775 1.53c.663.296.817.237 1.124.201.379-.047.817-.308 1.03-.687.213-.379.213-.71.154-.781-.06-.07-.237-.118-.503-.248s-1.562-.77-1.8-.852-.415-.119-.592.154c-.178.273-.663.852-.817 1.03-.154.178-.308.2-.574.07a7.228 7.228 0 0 1-2.107-1.3c-.628-.56-.995-1.254-1.113-1.455-.118-.2-.012-.308.106-.426.107-.107.237-.284.355-.426.118-.142.154-.237.237-.39.083-.154.041-.284-.02-.414-.063-.13-.592-1.432-.817-1.953a.9.9 0 0 0-.62-.574z"/>
+    </svg>
+  </a>
+
+  <!-- Custom Toast Notification -->
+  <div class="toast-notification" id="toast-booking-notification">
+    <div style="font-size: 1.2rem;">✨</div>
+    <div class="toast-text" id="toast-message-text">Consultation request registered. We will call you within 2 hours.</div>
+    <button class="toast-close" id="toast-close-btn" aria-label="Close Notification">&times;</button>
+  </div>
+
+  <script>
+    // MOBILE MENU SYSTEM
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const headerEl = document.getElementById('main-header');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    hamburgerBtn.addEventListener('click', () => {
+      headerEl.classList.toggle('header-nav-open');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        headerEl.classList.remove('header-nav-open');
+      });
+    });
+
+    // LIGHT/DARK THEME TOGGLE SYSTEM
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const htmlEl = document.documentElement;
+
+    // Load theme setting
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
+    if (savedTheme) {
+      htmlEl.setAttribute('data-theme', savedTheme);
+    } else if (systemPrefersDark) {
+      htmlEl.setAttribute('data-theme', 'dark');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlEl.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      htmlEl.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // INTERSECTIONOBSERVER SCROLL REVEALS
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target); // Unobserve to play animation once
+        }
+      });
+    }, {
+      threshold: 0.08
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // ANIMATED STATS COUNTER SYSTEM
+    const statsSection = document.getElementById('stats-section');
+    const counterElements = document.querySelectorAll('.stat-number');
+    let countersAnimated = false;
+
+    function animateCounters() {
+      counterElements.forEach(counter => {
+        const target = parseFloat(counter.getAttribute('data-target'));
+        const duration = 2000; // 2 seconds animation
+        const startTime = performance.now();
+        const isDecimal = target % 1 !== 0;
+
+        function updateCounter(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          
+          // Easing function: outQuad
+          const easeProgress = progress * (2 - progress);
+          
+          let currentVal = easeProgress * target;
+          
+          if (isDecimal) {
+            counter.innerText = currentVal.toFixed(1);
+          } else {
+            counter.innerText = Math.floor(currentVal) + (target === 91 || target === 5000 ? '+' : '');
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            // Guarantee final number matches target perfectly
+            if (isDecimal) {
+              counter.innerText = target.toFixed(1) + '/5';
+            } else {
+              counter.innerText = target + (target === 91 || target === 5000 ? '+' : (target === 10 ? '+' : ''));
+            }
+          }
+        }
+        
+        requestAnimationFrame(updateCounter);
+      });
+    }
+
+    const statsObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !countersAnimated) {
+          countersAnimated = true;
+          animateCounters();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    if (statsSection) {
+      statsObserver.observe(statsSection);
+    }
+
+    // FORM VALIDATION & INTERACTIVE SPARKS
+    const form = document.getElementById('consultation-form');
+    const inputs = form.querySelectorAll('.form-control');
+
+    inputs.forEach(input => {
+      input.addEventListener('input', () => {
+        const group = input.closest('.form-group');
+        if (input.checkValidity()) {
+          group.classList.add('is-valid');
+        } else {
+          group.classList.remove('is-valid');
+        }
+      });
+    });
+
+    // Premium Toast Display
+    const toast = document.getElementById('toast-booking-notification');
+    const toastCloseBtn = document.getElementById('toast-close-btn');
+
+    function showToast(message) {
+      document.getElementById('toast-message-text').innerText = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 5000);
+    }
+
+    toastCloseBtn.addEventListener('click', () => {
+      toast.classList.remove('show');
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Basic check
+      let formValid = true;
+      inputs.forEach(input => {
+        const group = input.closest('.form-group');
+        if (!input.checkValidity()) {
+          group.classList.add('is-invalid');
+          formValid = false;
+        } else {
+          group.classList.remove('is-invalid');
+        }
+      });
+
+      if (!formValid) return;
+
+      const submitBtn = document.getElementById('btn-submit-booking');
+      const btnText = submitBtn.querySelector('.btn-text');
+      const spinner = submitBtn.querySelector('.btn-spinner');
+
+      // Set Loading state
+      submitBtn.disabled = true;
+      btnText.style.opacity = '0';
+      spinner.style.display = 'block';
+
+      setTimeout(() => {
+        // Complete state
+        submitBtn.disabled = false;
+        btnText.style.opacity = '1';
+        spinner.style.display = 'none';
+
+        // Clear values
+        form.reset();
+        document.querySelectorAll('.form-group').forEach(group => {
+          group.classList.remove('is-valid');
+        });
+
+        // Show Toast celebration
+        showToast("✨ Booking request sent! We will reach out to you within 2 hours.");
+      }, 1500);
+    });
+
+    // Interactive Spine Click Easter Egg (Whimsy Injector)
+    const glowVertebra = document.getElementById('glow-vertebra');
+    if (glowVertebra) {
+      glowVertebra.addEventListener('click', () => {
+        showToast("⚡ L4-L5 lumbar vertebrae selected. Sciatic nerve decompression protocols are actively loaded!");
+      });
+    }
+  </script>
 </body>
 </html>
